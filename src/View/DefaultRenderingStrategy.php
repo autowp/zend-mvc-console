@@ -77,6 +77,8 @@ class DefaultRenderingStrategy extends AbstractListenerAggregate
             $errorLevel = $result->getErrorLevel();
             $response->setErrorLevel($errorLevel);
         }
+        
+        $console->write($response->getContent());
 
         return $response;
     }
